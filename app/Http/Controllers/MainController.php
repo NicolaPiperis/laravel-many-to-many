@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Portfolio;
+use App\Models\Type;
 
 class MainController extends Controller
 {
@@ -17,4 +18,7 @@ class MainController extends Controller
         $portfolio = Portfolio :: findOrFail($id);
         return view('dashboard', compact('portfolio'));
     }
+
+
 }
+

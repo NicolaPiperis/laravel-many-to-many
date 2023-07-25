@@ -5,6 +5,7 @@
             Portfolio, anteprima:
         </h1>
 
+
         <ul class="text-center mt-3 list-unstyled fs-3 bg-dark rounded">
             @foreach ($portfolios as $portfolio)
                 <li class="p-3">

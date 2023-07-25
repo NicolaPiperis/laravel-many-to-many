@@ -5,15 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Type extends Model
+class Technology extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'main_programming_language'
+        'name_tec'
     ];
-
-    public function portfolio() {
-        return $this -> hasMany(Portfolio :: class);
+    public function portfolios() {
+        return $this -> belongsToMany(Portfolio :: class);
     }
 }

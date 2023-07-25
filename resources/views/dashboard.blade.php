@@ -41,7 +41,7 @@
 
             <span class="col text-center">
                 Main language of the project:
-                {{ $portfolio->main_programming_language }}
+                {{ $portfolio->type->main_programming_language }}
             </span>
         </div>
 
