@@ -44,9 +44,18 @@
                 {{ $portfolio->type->main_programming_language }}
             </span>
         </div>
-
+        {{--
         <div class="text-center">
-            <a href=""></a>
+            {{ $portfolio->technology->name_tec }}
+        </div> --}}
+        <div class="text-center mt-5">
+            Nome tecnologie utilizzate:
+            @foreach ($portfolio->technologies as $technology)
+                <div class="text-center">
+                    {{ $technology->name_tec }}
+                </div>
+            @endforeach
         </div>
+
     </div>
 @endsection
