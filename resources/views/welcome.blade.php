@@ -5,6 +5,9 @@
             Portfolio, anteprima:
         </h1>
 
+        <a class="btn btn-primary" href="{{ route('project.create') }}">
+            +
+        </a>
 
         <ul class="text-center mt-3 list-unstyled fs-3 bg-dark rounded">
             @foreach ($portfolios as $portfolio)

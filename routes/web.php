@@ -30,4 +30,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route :: get('/create', [MainController :: class, 'create'])
+    -> middleware(['auth'])
+    -> name('project.create');
+
+    Route :: post('/store', [MainController :: class, 'store'])
+    -> middleware(['auth'])
+    -> name('portfolio.store');
+
 require __DIR__.'/auth.php';

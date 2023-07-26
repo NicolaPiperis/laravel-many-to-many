@@ -11,7 +11,8 @@ class Portfolio extends Model
     protected $fillable = [
         'name_project',
         'description',
-        'complexity'
+        'complexity',
+        'type_id'
     ];
 
     public function type() {

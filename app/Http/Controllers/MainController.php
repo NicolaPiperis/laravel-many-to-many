@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Portfolio;
 use App\Models\Type;
+use App\Models\Technology;
 
 class MainController extends Controller
 {
@@ -19,6 +20,21 @@ class MainController extends Controller
         return view('dashboard', compact('portfolio'));
     }
 
+    public function create() {
 
+        $types = Type :: all();
+        $technologies = Technology :: all();
+
+        return view('create', compact('types', 'technologies'));
+    }
+    public function store(Request $request) {
+
+        $data = $request -> all();
+
+        $portfolio = Portfolio :: create($data);
+        $technology -> portfolios() -> attach($portfolios);
+
+        return redirect() -> route('welcome', $portfolio->id);
+    }
 }
 
